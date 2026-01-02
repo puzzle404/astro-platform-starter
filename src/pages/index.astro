@@ -1,19 +1,63 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Markdown from '../components/Markdown.astro';
-
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
-
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
 ---
 
-<Layout title="Welcome to Astro.">
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
-    </p>
+<Layout title="Manuel Ferrer - Senior Ruby on Rails Developer">
+    <section class="mb-16">
+        <h1 class="mb-6">Manuel Ferrer</h1>
+        <p class="text-2xl text-primary font-semibold mb-8">Senior Ruby on Rails Developer</p>
+        <p class="text-lg leading-relaxed max-w-2xl">
+            Desarrollador backend especializado en Ruby on Rails con amplia experiencia en la construcción de aplicaciones web escalables, APIs robustas y sistemas de alto rendimiento.
+        </p>
+    </section>
+
+    <section class="mb-16">
+        <h2 class="mb-8">Habilidades Técnicas</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="bg-gray-900/50 p-6 rounded-lg">
+                <h3 class="text-primary font-semibold mb-3">Backend</h3>
+                <ul class="space-y-2 text-gray-300">
+                    <li>Ruby on Rails</li>
+                    <li>Ruby</li>
+                    <li>PostgreSQL / MySQL</li>
+                    <li>Redis / Sidekiq</li>
+                    <li>REST APIs / GraphQL</li>
+                </ul>
+            </div>
+            <div class="bg-gray-900/50 p-6 rounded-lg">
+                <h3 class="text-primary font-semibold mb-3">DevOps & Tools</h3>
+                <ul class="space-y-2 text-gray-300">
+                    <li>Docker / Kubernetes</li>
+                    <li>AWS / Heroku</li>
+                    <li>CI/CD Pipelines</li>
+                    <li>Git / GitHub</li>
+                    <li>RSpec / Testing</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-16">
+        <h2 class="mb-8">Contacto</h2>
+        <div class="space-y-4">
+            <p class="flex items-center gap-3">
+                <span class="text-primary font-semibold">Email:</span>
+                <a href="mailto:cmanuferrer@gmail.com">cmanuferrer@gmail.com</a>
+            </p>
+            <p class="flex items-center gap-3">
+                <span class="text-primary font-semibold">Teléfono:</span>
+                <a href="tel:+542613831194">+54 261 383 1194</a>
+            </p>
+            <p class="flex items-center gap-3">
+                <span class="text-primary font-semibold">LinkedIn:</span>
+                <a href="https://www.linkedin.com/in/ferrer-manuel/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ferrer-manuel</a>
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <a href="https://www.linkedin.com/in/ferrer-manuel/" target="_blank" rel="noopener noreferrer" class="btn btn-lg sm:min-w-64">
+            Ver perfil en LinkedIn
+        </a>
+    </section>
 </Layout>
