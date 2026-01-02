@@ -1,25 +1,25 @@
 ---
-import Logo from '../components/Logo.astro';
-
 const navItems = [
-    { linkText: 'Home', href: '/' },
-    { linkText: 'Revalidation', href: '/revalidation' },
-    { linkText: 'Image CDN', href: '/image-cdn' },
-    { linkText: 'Edge Function', href: '/edge' },
-    { linkText: 'Blobs', href: '/blobs' }
+    { linkText: 'Inicio', href: '/' },
+    { linkText: 'LinkedIn', href: 'https://www.linkedin.com/in/ferrer-manuel/', external: true }
 ];
 ---
 
 <nav class="flex flex-wrap items-center gap-4 pt-6 pb-16 sm:pt-12 sm:pb-24">
-    <a href="/">
-        <Logo />
+    <a href="/" class="text-xl font-bold text-primary no-underline hover:opacity-80 transition">
+        MF
     </a>
     {
         !!navItems?.length && (
             <ul class="flex flex-wrap gap-x-4 gap-y-1">
                 {navItems.map((item) => (
                     <li>
-                        <a href={item.href} class="inline-block px-1.5 py-1 sm:px-3 sm:py-2">
+                        <a
+                            href={item.href}
+                            class="inline-block px-1.5 py-1 sm:px-3 sm:py-2"
+                            target={item.external ? '_blank' : undefined}
+                            rel={item.external ? 'noopener noreferrer' : undefined}
+                        >
                             {item.linkText}
                         </a>
                     </li>
